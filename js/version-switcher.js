@@ -1,10 +1,10 @@
 /* =========================================================================
-   version-switcher.js — seletor de versão OCULTO (para apresentação)
+   version-switcher.js — seletor de versão (botão visível para o cliente)
    -------------------------------------------------------------------------
-   Como abrir o seletor (discreto, o cliente não vê):
-     • Tecla de atalho:  pressione a tecla  `  (crase / acento, canto sup. esq.
-       do teclado) — OU  Shift + V
-     • Ou clique no pequeno ponto quase invisível no canto inferior esquerdo.
+   Como abrir o seletor:
+     • Clique no botão "Trocar versão do site" no canto inferior esquerdo.
+     • Atalhos (opcionais): tecla  `  (crase) ou Shift + V para abrir;
+       teclas 1–4 trocam de versão com o painel aberto.
    Fechar: Esc, clicar fora, ou clicar no ✕.
    ========================================================================= */
 (function () {
@@ -25,9 +25,16 @@
 
   // ---- estilos -----------------------------------------------------------
   var css = '' +
-    '#vsw-dot{position:fixed;left:10px;bottom:10px;width:14px;height:14px;border-radius:50%;' +
-      'background:rgba(127,127,127,.18);z-index:99998;cursor:pointer;transition:background .25s,transform .25s;border:none}' +
-    '#vsw-dot:hover{background:rgba(127,127,127,.5);transform:scale(1.15)}' +
+    '#vsw-dot{position:fixed;left:16px;bottom:16px;display:inline-flex;align-items:center;gap:9px;' +
+      'padding:12px 18px 12px 15px;border:1px solid rgba(255,255,255,.18);border-radius:999px;' +
+      'background:#0a3a46;color:#fff;font:700 13.5px/1 "Plus Jakarta Sans","Hanken Grotesk",system-ui,sans-serif;' +
+      'letter-spacing:.01em;box-shadow:0 12px 34px -10px rgba(0,0,0,.55);z-index:99998;cursor:pointer;' +
+      'transition:transform .22s,box-shadow .22s,background .22s}' +
+    '#vsw-dot:hover{background:#0b5867;transform:translateY(-2px);box-shadow:0 18px 42px -12px rgba(0,0,0,.6)}' +
+    '#vsw-dot:active{transform:translateY(0)}' +
+    '#vsw-dot svg{flex:none;color:#e8a82a}' +
+    '#vsw-dot .vsw-dot-tx{white-space:nowrap}' +
+    '@media (max-width:480px){#vsw-dot{left:12px;bottom:12px;padding:11px 15px;font-size:12.5px}}' +
     '#vsw-overlay{position:fixed;inset:0;z-index:99999;display:none;align-items:center;justify-content:center;' +
       'background:rgba(6,30,38,.55);backdrop-filter:blur(6px);font-family:"Plus Jakarta Sans","Hanken Grotesk",system-ui,sans-serif}' +
     '#vsw-overlay.open{display:flex}' +
@@ -57,8 +64,14 @@
   // ---- markup ------------------------------------------------------------
   var dot = document.createElement('button');
   dot.id = 'vsw-dot';
-  dot.setAttribute('aria-label', 'Trocar versão');
-  dot.title = 'Trocar versão (tecla `)';
+  dot.type = 'button';
+  dot.setAttribute('aria-label', 'Trocar a versão visual do site');
+  dot.title = 'Trocar a versão visual do site';
+  dot.innerHTML =
+    '<svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" ' +
+      'stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">' +
+      '<path d="M12 2 2 7l10 5 10-5-10-5Z"/><path d="m2 17 10 5 10-5"/><path d="m2 12 10 5 10-5"/></svg>' +
+    '<span class="vsw-dot-tx">Trocar versão do site</span>';
 
   var overlay = document.createElement('div');
   overlay.id = 'vsw-overlay';
@@ -75,7 +88,7 @@
       '<div id="vsw-head"><div><h3>Versões do site</h3><div class="sub">Oliveira · apresentação</div></div>' +
         '<button id="vsw-close" aria-label="Fechar">&times;</button></div>' +
       '<div id="vsw-list">' + items + '</div>' +
-      '<div id="vsw-foot">Atalho: <kbd>`</kbd> ou <kbd>Shift</kbd>+<kbd>V</kbd> para abrir · <kbd>1</kbd>–<kbd>4</kbd> para trocar</div>' +
+      '<div id="vsw-foot">Clique em uma versão acima para visualizá-la</div>' +
     '</div>';
 
   function mount() {

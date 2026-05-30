@@ -12,12 +12,13 @@ Site institucional one-page, **4 versões visuais** alternáveis por um **seleto
 
 Todas usam fontes **Plus Jakarta Sans + Manrope** e accent **amarelo**.
 
-## Seletor oculto (durante a apresentação)
-- Abrir: tecla **`` ` ``** (crase) **ou** **Shift + V** — ou clicar no pontinho quase invisível no canto inferior esquerdo.
-- Trocar: clicar na versão, ou teclas **1–4** com o painel aberto.
-- Fechar: **Esc** ou clicar fora.
+## Seletor de versão (visível para o cliente)
+- Abrir: clicar no botão **"Trocar versão do site"** no canto inferior esquerdo.
+- Trocar: clicar na versão desejada (atalhos opcionais: teclas **1–4** com o painel aberto).
+- Fechar: **Esc**, clicar fora, ou no **✕**.
+- Atalhos para abrir também funcionam: tecla **`` ` ``** (crase) ou **Shift + V**.
 
-O cliente não vê o seletor; só você sabe o atalho.
+O botão é visível para o cliente escolher a direção visual entre as 4 versões.
 
 ## Publicar no GitHub Pages
 1. Crie um repositório novo no GitHub (ex.: `oliveira-site`).
