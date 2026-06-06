@@ -12,10 +12,11 @@
 
   // Ordem e rótulos das versões. O "file" deve bater com os arquivos no repo.
   var VERSIONS = [
-    { file: 'index.html',     key: 'premium',   label: 'Premium',     desc: 'Cinematográfica · foto full-bleed' },
-    { file: 'clean.html',     key: 'clean',     label: 'Clean',       desc: 'Corporativa clara · cards' },
-    { file: 'tech.html',      key: 'tech',      label: 'Tech',        desc: 'Escura · aurora · vidro' },
-    { file: 'editorial.html', key: 'editorial', label: 'Editorial',   desc: 'Serifada · premium 2' }
+    { file: 'index.html',    key: 'fusion',    label: 'Fusion (v5)', desc: 'Premium + dinamismo Tech' },
+    { file: 'premium.html',  key: 'premium',   label: 'Premium',     desc: 'Cinematográfica · foto full-bleed' },
+    { file: 'clean.html',    key: 'clean',     label: 'Clean',       desc: 'Corporativa clara · cards' },
+    { file: 'tech.html',     key: 'tech',      label: 'Tech',        desc: 'Escura · aurora · vidro' },
+    { file: 'editorial.html',key: 'editorial', label: 'Editorial',   desc: 'Serifada · premium 2' }
   ];
 
   // Detecta o arquivo atual

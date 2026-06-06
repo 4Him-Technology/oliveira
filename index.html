@@ -9,6 +9,7 @@
 <link rel="stylesheet" href="css/base.css">
 <link rel="stylesheet" href="css/heroes.css">
 <link rel="stylesheet" href="css/sections.css">
+<link rel="stylesheet" href="css/fusion.css">
 <style>
   /* Isolated build — Jakarta + Manrope, accent amarelo, sem indicador de rolagem */
   :root{
@@ -246,6 +247,7 @@
 
   <!-- ============ Sobre ============ -->
   <section class="section" id="sobre" data-screen-label="Sobre">
+    <span class="cap-float cap-toss"></span>
     <div class="wrap about-grid">
       <div class="about-media" data-reveal="right">
         <span class="accent-bar"></span>
@@ -301,6 +303,13 @@
         <h2 class="section-title" data-reveal="up">Equipamentos Médicos sem Alto Investimento Inicial</h2>
         <p class="lede" data-reveal="up">Tenha acesso a equipamentos modernos através de comodato ou locação inteligente, reduzindo custos operacionais e evitando a descapitalização da sua empresa. Soluções flexíveis para clínicas, empresas e profissionais da saúde.</p>
       </div>
+      <div class="glass float-widget sec-widget w-ecg">
+        <div class="row">
+          <span class="av icon" style="background:linear-gradient(135deg,var(--teal-600),var(--cyan-500))"><svg><use href="#i-activity"/></svg></span>
+          <div><b>Monitoramento ECG</b><small>Sinais estáveis</small></div>
+        </div>
+        <svg class="ecg" viewBox="0 0 320 54" preserveAspectRatio="none"><path d="M0 27 H60 l8 -18 l10 36 l8 -18 H150 l8 -22 l10 44 l8 -22 H320"/></svg>
+      </div>
       <div class="equip">
         <div class="equip-media" data-reveal="right">
           <img src="https://images.unsplash.com/photo-1576091160550-2173dba999ef?auto=format&fit=crop&w=1100&q=70" alt="Equipamentos médicos modernos">
@@ -345,6 +354,7 @@
   <!-- ============ Como Funciona (fluxo do laudo, 6 passos) ============ -->
   <section class="section bg-paper" id="como-funciona-laudo" data-screen-label="Como Funciona">
     <div class="wrap">
+      <span class="cap-float cap-drop"></span>
       <div class="sec-head" data-stagger="100">
         <span class="eyebrow" data-reveal="up">Laudos Online · Passo a Passo</span>
         <h2 class="section-title" data-reveal="up">Como Funciona</h2>
@@ -400,6 +410,7 @@
   <!-- ============ Saúde Ocupacional ============ -->
   <section class="section" id="ocupacional" data-screen-label="Saúde Ocupacional">
     <div class="wrap">
+      <span class="cap-float cap-swing"></span>
       <div class="sec-head" data-stagger="100">
         <span class="eyebrow" data-reveal="up">Saúde Ocupacional</span>
         <h2 class="section-title" data-reveal="up">Gestão Completa em Saúde Ocupacional</h2>
@@ -451,6 +462,7 @@
   <!-- ============ Nosso Processo ============ -->
   <section class="section" id="como-funciona" data-screen-label="Nosso Processo">
     <div class="wrap">
+      <span class="cap-float cap-tumble"></span>
       <div class="sec-head center" data-stagger="100">
         <span class="eyebrow" data-reveal="up">Nosso Processo</span>
         <h2 class="section-title" data-reveal="up">Simples, Estratégico e Eficiente</h2>
@@ -470,6 +482,13 @@
       <div class="sec-head" data-stagger="100">
         <span class="eyebrow" data-reveal="up">Benefícios</span>
         <h2 class="section-title" data-reveal="up">Mais Economia, Tecnologia e Segurança para sua Empresa</h2>
+      </div>
+      <div class="glass float-widget sec-widget w-tele">
+        <div class="row">
+          <span class="av" style="background-image:url('https://images.unsplash.com/photo-1612349317150-e413f6a5b16d?auto=format&fit=crop&w=200&q=70')"></span>
+          <div><b>Teleconsulta</b><small>Médico especialista</small></div>
+          <span class="badge is-live">Ao vivo</span>
+        </div>
       </div>
       <div class="check-grid" data-stagger="55">
         <div class="check-item" data-reveal="up"><span class="tick"><svg class="ic"><use href="#i-wallet"/></svg></span> Menor custo operacional</div>
@@ -491,6 +510,13 @@
         <span class="eyebrow" data-reveal="up">Para quem é</span>
         <h2 class="section-title" data-reveal="up">Soluções para Empresas, Clínicas e Profissionais</h2>
         <p class="lede" data-reveal="up">Atendemos diferentes perfis que precisam de estrutura médica, tecnologia e gestão de saúde com eficiência.</p>
+      </div>
+      <div class="glass float-widget sec-widget w-laudo">
+        <div class="row">
+          <span class="av icon"><svg><use href="#i-doc-check"/></svg></span>
+          <div><b>Laudo emitido</b><small>Assinado digitalmente</small></div>
+          <span class="badge">Pronto</span>
+        </div>
       </div>
       <div class="seg-grid" data-stagger="70">
         <div class="seg-card" data-reveal="up"><span class="ic"><svg><use href="#i-building"/></svg></span><b>Empresas de todos os portes</b></div>
@@ -568,6 +594,7 @@
 
 <!-- ============ Scripts ============ -->
 <script src="js/app.js"></script>
+<script src="js/fusion.js"></script>
 <script src="js/version-switcher.js"></script>
 
 </body>

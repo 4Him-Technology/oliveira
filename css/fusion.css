@@ -1,0 +1,107 @@
+/* =========================================================================
+   fusion.css — Versão 5 (Fusion)
+   Base = Premium (hero-c, intacto). Widgets dinâmicos ISOLADOS nos espaços
+   vazios: cards claros + pílula da marca. Keyframes próprios + de heroes.css.
+   A pílula é SEMPRE a mesma (dourado/ciano) — o que varia é o MOVIMENTO.
+   ========================================================================= */
+
+/* ---- Card flutuante CLARO (premium) ----------------------------------- */
+.glass.float-widget{
+  background:#fff;
+  border:1px solid var(--line);
+  border-radius:18px;
+  box-shadow:0 26px 54px -26px rgba(7,45,55,.5), 0 4px 10px -4px rgba(7,45,55,.08);
+  padding:15px 17px;
+  width:340px;
+  -webkit-backdrop-filter:none;backdrop-filter:none;
+  z-index:5;
+}
+.float-widget .row{display:flex;align-items:center;gap:13px}
+.float-widget .row > div{flex:1;min-width:0}
+.float-widget .av{width:46px;height:46px;border-radius:13px;flex:none;box-shadow:0 6px 16px -8px rgba(7,45,55,.5)}
+.float-widget .av.icon{display:grid;place-items:center;color:#fff}
+.float-widget .av.icon svg{width:24px;height:24px}
+.float-widget b{font-family:var(--font-display);font-size:15px;font-weight:700;color:var(--teal-900);display:block;line-height:1.25}
+.float-widget small{color:var(--muted);font-size:12.5px;display:block;line-height:1.3;margin-top:2px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.float-widget .badge{margin-left:auto;flex:none;white-space:nowrap;font-size:10.5px;font-weight:800;letter-spacing:.06em;text-transform:uppercase;padding:6px 11px;border-radius:999px;background:rgba(30,168,196,.14);color:var(--teal-600)}
+.float-widget .badge.is-live{background:rgba(46,204,113,.16);color:#1c9a53;display:inline-flex;align-items:center;gap:7px}
+.float-widget .badge.is-live::before{content:"";width:7px;height:7px;border-radius:50%;background:#27c46a;animation:livePing 1.8s ease-out infinite}
+@keyframes livePing{0%{box-shadow:0 0 0 0 rgba(39,196,106,.5)}70%{box-shadow:0 0 0 7px rgba(39,196,106,0)}100%{box-shadow:0 0 0 0 rgba(39,196,106,0)}}
+.float-widget .ecg{margin-top:8px;height:40px;width:100%}
+.float-widget .ecg path{fill:none;stroke:var(--cyan-500);stroke-width:2.6;stroke-linecap:round;stroke-dasharray:600;stroke-dashoffset:600;animation:trace 3s linear infinite}
+
+/* ---- Posições dos cards (à direita do título da seção) ----------------- */
+#comodato > .wrap,
+#beneficios > .wrap,
+#para-quem > .wrap{position:relative}
+.sec-widget{top:6px;right:0}
+.w-laudo .av.icon{background:linear-gradient(135deg,var(--gold-500),var(--gold-600))}
+#comodato .sec-widget{animation:float2 8s var(--ease) infinite}
+#beneficios .sec-widget{animation:float1 7s var(--ease) infinite}
+#para-quem .sec-widget{animation:float1 9s var(--ease) infinite .4s}
+@media (max-width:1024px){.sec-widget{display:none}}
+
+/* =======================================================================
+   Pílula da marca — MESMA aparência sempre; só o MOVIMENTO muda.
+   ======================================================================= */
+.cap-float{
+  position:absolute;pointer-events:none;z-index:0;border-radius:999px;
+  width:32px;height:80px;
+  background:linear-gradient(180deg,var(--gold-500) 50%,var(--cyan-500) 50%);
+  box-shadow:0 16px 30px -14px rgba(7,45,55,.4);
+}
+
+/* 🪂 QUEDA — cai de cima e quica até assentar ("no pote") */
+.cap-drop{animation:capDrop 3.8s linear infinite}
+@keyframes capDrop{
+  0%  {transform:translateY(-165px);opacity:0;animation-timing-function:cubic-bezier(.5,0,.9,.45)}
+  12% {opacity:1}
+  38% {transform:translateY(0);opacity:1;animation-timing-function:cubic-bezier(.3,.85,.5,1)}
+  50% {transform:translateY(-30px)}
+  60% {transform:translateY(0)}
+  68% {transform:translateY(-11px)}
+  76% {transform:translateY(0)}
+  92% {transform:translateY(0);opacity:1}
+  100%{transform:translateY(0);opacity:0}
+}
+
+/* 🚀 ARREMESSO — jogada pra cima, gira no ar e volta com pequeno repique */
+.cap-toss{animation:capToss 2.9s linear infinite}
+@keyframes capToss{
+  0%  {transform:translateY(0) rotate(0deg);animation-timing-function:cubic-bezier(.25,.7,.45,1)}
+  44% {transform:translateY(-118px) rotate(170deg);animation-timing-function:cubic-bezier(.55,.05,.8,.5)}
+  82% {transform:translateY(0) rotate(345deg);animation-timing-function:cubic-bezier(.3,.9,.5,1)}
+  90% {transform:translateY(-14px) rotate(352deg)}
+  100%{transform:translateY(0) rotate(360deg)}
+}
+
+/* 🤸 CAMBALHOTA — rola/tomba pelo ar */
+.cap-tumble{animation:capTumble 5s ease-in-out infinite}
+@keyframes capTumble{
+  0%  {transform:translate(0,0) rotate(0deg)}
+  25% {transform:translate(13px,-17px) rotate(110deg)}
+  50% {transform:translate(0,-26px) rotate(220deg)}
+  75% {transform:translate(-13px,-15px) rotate(320deg)}
+  100%{transform:translate(0,0) rotate(360deg)}
+}
+
+/* ⏳ PÊNDULO — balança pendurada pelo topo */
+.cap-swing{transform-origin:top center;animation:capSwing 2.6s ease-in-out infinite}
+@keyframes capSwing{
+  0%,100%{transform:rotate(-24deg)}
+  50%    {transform:rotate(24deg)}
+}
+
+/* posições nas margens brancas (espaço p/ o movimento vertical) */
+#sobre .cap-float{top:50%;right:calc(50% + 606px)}              /* esquerda — ARREMESSO */
+#como-funciona-laudo .cap-float{top:46%;left:calc(50% + 606px)}  /* direita — QUEDA */
+#ocupacional .cap-float{top:30%;right:calc(50% + 606px)}         /* esquerda — PÊNDULO */
+#como-funciona .cap-float{top:32%;left:calc(50% + 606px)}        /* direita — CAMBALHOTA */
+
+/* ---- Responsivo / acessibilidade -------------------------------------- */
+@media (max-width:1366px){.cap-float{display:none}}
+@media (prefers-reduced-motion:reduce){
+  .sec-widget,.cap-float{animation:none}
+  .float-widget .ecg path{stroke-dashoffset:0;animation:none}
+  .float-widget .badge.is-live::before{animation:none}
+}
