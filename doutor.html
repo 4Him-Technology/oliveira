@@ -1,0 +1,354 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Doutor Safety — Saúde Ocupacional, Segurança do Trabalho e Telemedicina</title>
+<meta name="description" content="Doutor Safety — Consultoria em saúde, segurança e qualidade no trabalho. Soluções completas em Saúde Ocupacional, Segurança do Trabalho e Telemedicina para empresas de todo o Brasil.">
+<link rel="icon" type="image/svg+xml" href="assets/doutor-logo.svg">
+<link rel="stylesheet" href="css/doutor.css">
+</head>
+<body>
+
+<div class="progress ds-progress"></div>
+
+<!-- ============ Icon sprite ============ -->
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <symbol id="ds-logo" viewBox="0 0 64 64"><path d="M9 42 C 17 59 47 59 59 37" fill="none" stroke="#1b3a5e" stroke-width="6" stroke-linecap="round"/><path d="M32 52 C 9 35 14 12 32 21 C 50 12 55 35 32 52 Z" fill="#1f9d4e"/><circle cx="32" cy="24.5" r="4.2" fill="#fff"/><path d="M32 29 L32 37 M32 30.5 L25.5 25.5 M32 30.5 L38.5 25.5" stroke="#fff" stroke-width="3.2" stroke-linecap="round" fill="none"/><g fill="#2ECC80"><rect x="47.5" y="11" width="11" height="3.6" rx="1.8"/><rect x="51.7" y="6.8" width="3.6" height="11" rx="1.8"/></g></symbol>
+  <symbol id="i-check" viewBox="0 0 24 24"><path d="M4 12.5 9 17.5 20 6.5" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+  <symbol id="i-arrow" viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+  <symbol id="i-shield" viewBox="0 0 24 24"><path d="M12 3l7 3v5c0 4.5-3 8.2-7 10-4-1.8-7-5.5-7-10V6z" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/><path d="M8.8 12l2.2 2.2L15.4 10" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+  <symbol id="i-doc-check" viewBox="0 0 24 24"><path d="M6 3h8l4 4v14H6z" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/><path d="M14 3v4h4M8.5 14l2.2 2.2L15 12" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+  <symbol id="i-activity" viewBox="0 0 24 24"><path d="M3 12h3l2 5 4-12 2 7 2-4h5" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+  <symbol id="i-clock" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9" fill="none" stroke="currentColor" stroke-width="2"/><path d="M12 7v5l3.5 2" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+  <symbol id="i-lock" viewBox="0 0 24 24"><rect x="4.5" y="10" width="15" height="10" rx="2.5" fill="none" stroke="currentColor" stroke-width="2"/><path d="M8 10V7a4 4 0 0 1 8 0v3" fill="none" stroke="currentColor" stroke-width="2"/></symbol>
+  <symbol id="i-headset" viewBox="0 0 24 24"><path d="M4 13v-1a8 8 0 0 1 16 0v1" fill="none" stroke="currentColor" stroke-width="2"/><rect x="2.5" y="13" width="4" height="7" rx="2" fill="none" stroke="currentColor" stroke-width="2"/><rect x="17.5" y="13" width="4" height="7" rx="2" fill="none" stroke="currentColor" stroke-width="2"/><path d="M20 20a4 4 0 0 1-4 3h-2" fill="none" stroke="currentColor" stroke-width="2"/></symbol>
+  <symbol id="i-users" viewBox="0 0 24 24"><circle cx="9" cy="8" r="3.2" fill="none" stroke="currentColor" stroke-width="2"/><path d="M3.5 20a5.5 5.5 0 0 1 11 0M16 5.2a3.2 3.2 0 0 1 0 6M17 20a5.5 5.5 0 0 0-3-4.9" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></symbol>
+  <symbol id="i-layers" viewBox="0 0 24 24"><path d="M12 3l9 5-9 5-9-5z" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/><path d="M3 12.5l9 5 9-5M3 17l9 5 9-5" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/></symbol>
+  <symbol id="i-scan" viewBox="0 0 24 24"><path d="M4 8V6a2 2 0 0 1 2-2h2M16 4h2a2 2 0 0 1 2 2v2M20 16v2a2 2 0 0 1-2 2h-2M8 20H6a2 2 0 0 1-2-2v-2" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"/><path d="M4 12h16" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></symbol>
+  <symbol id="i-refresh" viewBox="0 0 24 24"><path d="M20 11a8 8 0 0 0-14-4.5L4 8M4 13a8 8 0 0 0 14 4.5L20 16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/><path d="M4 4v4h4M20 20v-4h-4" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+  <symbol id="i-video" viewBox="0 0 24 24"><rect x="2.5" y="6" width="13" height="12" rx="2.5" fill="none" stroke="currentColor" stroke-width="2"/><path d="M15.5 10l6-3v10l-6-3" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/></symbol>
+  <symbol id="i-stethoscope" viewBox="0 0 24 24"><path d="M5 3v5a4 4 0 0 0 8 0V3M9 16v.5a5 5 0 0 0 5 5 5 5 0 0 0 5-5V14" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"/><circle cx="19" cy="12" r="2.2" fill="none" stroke="currentColor" stroke-width="2"/></symbol>
+  <symbol id="i-hardhat" viewBox="0 0 24 24"><path d="M3 17a9 9 0 0 1 18 0" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"/><path d="M9.5 8.4V6.2a2.5 2.5 0 0 1 5 0v2.2" fill="none" stroke="currentColor" stroke-width="2"/><path d="M2.5 17h19" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></symbol>
+  <symbol id="i-heart" viewBox="0 0 24 24"><path d="M12 20S4 14.5 4 8.8A4.3 4.3 0 0 1 12 6a4.3 4.3 0 0 1 8 2.8C20 14.5 12 20 12 20z" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/></symbol>
+  <symbol id="i-zap" viewBox="0 0 24 24"><path d="M13 2 4 14h7l-1 8 9-12h-7z" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/></symbol>
+  <symbol id="i-phone" viewBox="0 0 24 24"><path d="M5 4h4l2 5-2.5 1.5a11 11 0 0 0 5 5L15 13l5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 3 6a2 2 0 0 1 2-2z" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/></symbol>
+  <symbol id="i-mail" viewBox="0 0 24 24"><rect x="3" y="5" width="18" height="14" rx="2" fill="none" stroke="currentColor" stroke-width="2"/><path d="M4 7l8 6 8-6" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/></symbol>
+  <symbol id="i-pin" viewBox="0 0 24 24"><path d="M12 21s7-6.3 7-11a7 7 0 0 0-14 0c0 4.7 7 11 7 11z" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/><circle cx="12" cy="10" r="2.6" fill="none" stroke="currentColor" stroke-width="2"/></symbol>
+  <symbol id="i-globe" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9" fill="none" stroke="currentColor" stroke-width="2"/><path d="M3 12h18M12 3c2.5 2.5 2.5 15 0 18M12 3c-2.5 2.5-2.5 15 0 18" fill="none" stroke="currentColor" stroke-width="2"/></symbol>
+  <symbol id="i-building" viewBox="0 0 24 24"><rect x="5" y="3" width="14" height="18" rx="1.5" fill="none" stroke="currentColor" stroke-width="2"/><path d="M9 7h2M13 7h2M9 11h2M13 11h2M10 21v-3h4v3" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></symbol>
+  <symbol id="i-factory" viewBox="0 0 24 24"><path d="M3 21V9l6 4V9l6 4V7l6 3v11z" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/><path d="M3 21h18" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></symbol>
+  <symbol id="i-hospital" viewBox="0 0 24 24"><rect x="4" y="7" width="16" height="14" rx="1.5" fill="none" stroke="currentColor" stroke-width="2"/><path d="M9 7V4h6v3M12 11v5M9.5 13.5h5" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></symbol>
+  <symbol id="i-briefcase" viewBox="0 0 24 24"><rect x="3" y="7" width="18" height="13" rx="2" fill="none" stroke="currentColor" stroke-width="2"/><path d="M8 7V5.5A1.5 1.5 0 0 1 9.5 4h5A1.5 1.5 0 0 1 16 5.5V7M3 12h18" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></symbol>
+  <symbol id="i-store" viewBox="0 0 24 24"><path d="M4 10v9a1 1 0 0 0 1 1h14a1 1 0 0 0 1-1v-9" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/><path d="M3 6h18l-1 4a3 3 0 0 1-6 0 3 3 0 0 1-6 0L3 6z" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/></symbol>
+  <symbol id="i-truck" viewBox="0 0 24 24"><path d="M3 6h11v10H3z" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/><path d="M14 9h4l3 3v4h-7z" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/><circle cx="7.5" cy="18" r="1.8" fill="none" stroke="currentColor" stroke-width="2"/><circle cx="17.5" cy="18" r="1.8" fill="none" stroke="currentColor" stroke-width="2"/></symbol>
+  <symbol id="i-whatsapp" viewBox="0 0 24 24"><path d="M12 2a10 10 0 0 0-8.6 15l-1.3 4.7 4.8-1.3A10 10 0 1 0 12 2z" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/><path d="M8.5 7.5c.3 0 .6 0 .8.5l.9 2c.1.3 0 .5-.1.7l-.6.7c-.2.2-.2.4 0 .7a7 7 0 0 0 3 3c.3.2.5.1.7-.1l.7-.8c.2-.2.4-.2.7-.1l2 .9c.4.2.5.5.5.8 0 1.3-1.1 2.3-2.4 2.3A9 9 0 0 1 6.2 9.9C6.2 8.6 7.2 7.5 8.5 7.5z" fill="currentColor"/></symbol>
+</svg>
+
+<!-- ============ Topbar ============ -->
+<div class="ds-topbar">
+  <div class="ds-wrap">
+    <a href="tel:+5511963252915"><svg><use href="#i-phone"/></svg> (11) 96325-2915</a>
+    <a href="mailto:contato@doutorsafety.com.br"><svg><use href="#i-mail"/></svg> contato@doutorsafety.com.br</a>
+    <span><svg><use href="#i-pin"/></svg> Rua Miguel Romano, 65 — Centro, Guarulhos/SP</span>
+  </div>
+</div>
+
+<!-- ============ Header ============ -->
+<header class="site-header">
+  <div class="ds-wrap">
+    <a class="brand" href="#top" aria-label="Doutor Safety — Saúde Ocupacional">
+      <span class="mark"><svg viewBox="0 0 64 64"><use href="#ds-logo"/></svg></span>
+      <span class="name"><span class="d">DOUTOR</span> <span class="s">SAFETY</span><small>SAÚDE OCUPACIONAL LTDA</small></span>
+    </a>
+    <nav class="ds-nav" aria-label="Navegação principal">
+      <a href="#sobre">Sobre</a>
+      <a href="#servicos">Serviços</a>
+      <a href="#diferenciais">Diferenciais</a>
+      <a href="#planos">Planos</a>
+      <a href="#para-quem">Para quem é</a>
+    </nav>
+    <div class="header-cta">
+      <a class="ds-btn acc" href="#contato">Solicite Proposta <svg><use href="#i-arrow"/></svg></a>
+      <button class="menu-toggle" aria-label="Abrir menu"><span></span></button>
+    </div>
+  </div>
+</header>
+
+<!-- ============ Mobile nav ============ -->
+<div class="mobile-nav" id="mobileNav">
+  <button class="close" aria-label="Fechar menu">✕</button>
+  <a href="#sobre">Sobre</a>
+  <a href="#servicos">Serviços</a>
+  <a href="#diferenciais">Diferenciais</a>
+  <a href="#planos">Planos</a>
+  <a href="#beneficios">Benefícios</a>
+  <a href="#para-quem">Para quem é</a>
+  <a class="ds-btn acc" href="#contato">Solicite Proposta <svg><use href="#i-arrow"/></svg></a>
+</div>
+
+<a id="top"></a>
+
+<!-- ============ HERO ============ -->
+<section class="ds-hero" id="hero">
+  <span class="chevrons"></span>
+  <span class="glow g1"></span><span class="glow g2"></span>
+  <div class="ds-wrap ds-hero-grid">
+    <div class="ds-hero-copy" data-stagger="100">
+      <span class="ds-kicker on-dark" data-reveal="up">Especialistas em você</span>
+      <h1 class="ds-h1" data-reveal="up">Cuidamos da saúde da sua equipe para sua empresa <span class="u">crescer</span></h1>
+      <p class="ds-hero-sub" data-reveal="up">Soluções completas em Saúde Ocupacional, Segurança do Trabalho e Telemedicina para empresas que valorizam seus colaboradores e desejam atuar com segurança, agilidade e conformidade.</p>
+      <div class="ds-hero-cta" data-reveal="up">
+        <a class="ds-btn acc lg" href="#contato">Solicite Proposta <svg><use href="#i-arrow"/></svg></a>
+        <a class="ds-btn wa lg" href="https://wa.me/5511963252915?text=Ol%C3%A1!%20Gostaria%20de%20uma%20proposta%20da%20Doutor%20Safety." target="_blank" rel="noopener"><svg><use href="#i-whatsapp"/></svg> Fale no WhatsApp</a>
+        <a class="ds-btn ghost lg" href="#planos">Conheça os Planos</a>
+      </div>
+      <ul class="ds-trust" data-reveal="up">
+        <li><svg><use href="#i-check"/></svg> Conformidade com as normas</li>
+        <li><svg><use href="#i-check"/></svg> Gestão ocupacional completa</li>
+        <li><svg><use href="#i-check"/></svg> Telemedicina integrada</li>
+        <li><svg><use href="#i-check"/></svg> Todos os portes</li>
+        <li><svg><use href="#i-check"/></svg> Rede própria de clínicas</li>
+      </ul>
+    </div>
+
+    <div class="ds-emblem" data-reveal="scale">
+      <span class="ring r2"></span>
+      <span class="ring"></span>
+      <span class="conf">100% Conforme</span>
+      <div class="core">
+        <span class="logo-chip"><svg viewBox="0 0 64 64" aria-hidden="true"><use href="#ds-logo"/></svg></span>
+        <b>Doutor Safety</b>
+        <span>Saúde Ocupacional</span>
+      </div>
+      <span class="ds-seal s1"><svg><use href="#i-doc-check"/></svg> PCMSO em dia</span>
+      <span class="ds-seal s2"><svg><use href="#i-stethoscope"/></svg> ASO emitido</span>
+      <span class="ds-seal s3"><svg><use href="#i-refresh"/></svg> eSocial integrado</span>
+    </div>
+  </div>
+</section>
+
+<!-- ============ Faixa de confiança (cards de topo) ============ -->
+<div class="ds-strip">
+  <div class="ds-wrap">
+    <div class="it"><svg><use href="#i-shield"/></svg> Sua empresa em conformidade com a Lei</div>
+    <div class="it"><svg><use href="#i-users"/></svg> Equipe especializada e qualificada</div>
+    <div class="it"><svg><use href="#i-heart"/></svg> Atendimento rápido e humanizado</div>
+    <div class="it"><svg><use href="#i-lock"/></svg> Sigilo e segurança das informações</div>
+    <div class="it"><svg><use href="#i-globe"/></svg> Atendimento em todo o Brasil</div>
+  </div>
+</div>
+
+<main>
+
+  <!-- ============ Sobre ============ -->
+  <section class="ds-sec" id="sobre">
+    <div class="ds-wrap ds-about">
+      <div data-stagger="100">
+        <span class="ds-kicker" data-reveal="up">Sobre a Doutor Safety</span>
+        <p class="stmt" data-reveal="up" style="margin-top:16px">Nascemos para oferecer um atendimento ocupacional <em>moderno, eficiente e humanizado</em> — para empresas que querem cuidar da saúde dos colaboradores sem burocracia.</p>
+        <p class="ds-lead" data-reveal="up">Nosso foco é proporcionar tranquilidade para a sua empresa, reduzindo riscos, otimizando processos e garantindo conformidade com as exigências legais.</p>
+      </div>
+      <div data-reveal="right">
+        <ul class="ds-sol">
+          <li><span class="ch"></span> Saúde Ocupacional</li>
+          <li><span class="ch"></span> Segurança do Trabalho</li>
+          <li><span class="ch"></span> Telemedicina</li>
+          <li><span class="ch"></span> Gestão de exames ocupacionais</li>
+          <li><span class="ch"></span> Programas obrigatórios</li>
+          <li><span class="ch"></span> Atendimento empresarial</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ Serviços ============ -->
+  <section class="ds-sec bg-soft" id="servicos">
+    <div class="ds-wrap">
+      <div data-stagger="100">
+        <span class="ds-kicker" data-reveal="up">Nossos Serviços</span>
+        <h2 class="ds-h2" data-reveal="up">Tudo o que a sua empresa precisa está aqui</h2>
+      </div>
+      <div class="ds-svc" data-stagger="70">
+        <div class="svc" data-reveal="up"><div class="no">01</div><div><h3><svg><use href="#i-shield"/></svg> PCMSO</h3><p>Programa de Controle Médico de Saúde Ocupacional — gestão completa com acompanhamento médico e documentos obrigatórios.</p></div></div>
+        <div class="svc" data-reveal="up"><div class="no">02</div><div><h3><svg><use href="#i-layers"/></svg> PGR</h3><p>Programa de Gerenciamento de Riscos — mapeamento e controle de riscos ocupacionais para mais segurança no trabalho.</p></div></div>
+        <div class="svc" data-reveal="up"><div class="no">03</div><div><h3><svg><use href="#i-doc-check"/></svg> LTCAT</h3><p>Laudo Técnico das Condições Ambientais do Trabalho, conforme as exigências legais e previdenciárias.</p></div></div>
+        <div class="svc" data-reveal="up"><div class="no">04</div><div><h3><svg><use href="#i-scan"/></svg> Exames Ocupacionais</h3><p>Admissionais, demissionais, periódicos, retorno ao trabalho e mudança de função — rápido e organizado.</p></div></div>
+        <div class="svc" data-reveal="up"><div class="no">05</div><div><h3><svg><use href="#i-refresh"/></svg> eSocial SST</h3><p>Integração completa com o eSocial para o envio das informações obrigatórias de SST.</p></div></div>
+        <div class="svc" data-reveal="up"><div class="no">06</div><div><h3><svg><use href="#i-video"/></svg> Telemedicina</h3><p>Consultas e suporte médico ocupacional com praticidade, agilidade e tecnologia.</p></div></div>
+        <div class="svc" data-reveal="up"><div class="no">07</div><div><h3><svg><use href="#i-stethoscope"/></svg> ASO</h3><p>Atestado de Saúde Ocupacional emitido com rapidez e total conformidade.</p></div></div>
+        <div class="svc" data-reveal="up"><div class="no">08</div><div><h3><svg><use href="#i-hardhat"/></svg> Segurança do Trabalho</h3><p>Assessoria técnica especializada para adequação às normas regulamentadoras e prevenção de riscos.</p></div></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ Diferenciais ============ -->
+  <section class="ds-sec ds-diff" id="diferenciais">
+    <span class="chev"></span>
+    <div class="ds-wrap">
+      <div data-stagger="100">
+        <span class="ds-kicker on-dark" data-reveal="up">Diferenciais</span>
+        <h2 class="ds-h2 on-dark" data-reveal="up">Por que escolher a Doutor Safety?</h2>
+        <p class="ds-lead on-dark" data-reveal="up">Não somos “só mais uma empresa de medicina ocupacional” — somos a empresa que a sua empresa precisa.</p>
+      </div>
+      <ul class="ds-diff-grid" data-stagger="55">
+        <li data-reveal="up"><span class="tk"><svg><use href="#i-check"/></svg></span> Atendimento humanizado</li>
+        <li data-reveal="up"><span class="tk"><svg><use href="#i-check"/></svg></span> Equipe especializada</li>
+        <li data-reveal="up"><span class="tk"><svg><use href="#i-check"/></svg></span> Agilidade nos processos</li>
+        <li data-reveal="up"><span class="tk"><svg><use href="#i-check"/></svg></span> Gestão ocupacional simplificada</li>
+        <li data-reveal="up"><span class="tk"><svg><use href="#i-check"/></svg></span> Telemedicina integrada</li>
+        <li data-reveal="up"><span class="tk"><svg><use href="#i-check"/></svg></span> Suporte completo para empresas</li>
+        <li data-reveal="up"><span class="tk"><svg><use href="#i-check"/></svg></span> Atendimento com excelência</li>
+        <li data-reveal="up"><span class="tk"><svg><use href="#i-check"/></svg></span> Soluções modernas e eficientes</li>
+        <li data-reveal="up"><span class="tk"><svg><use href="#i-check"/></svg></span> Conformidade com as exigências legais</li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- ============ Planos ============ -->
+  <section class="ds-sec" id="planos">
+    <div class="ds-wrap">
+      <div class="ds-center" data-stagger="100">
+        <span class="ds-kicker" data-reveal="up">Planos</span>
+        <h2 class="ds-h2" data-reveal="up">Pacote acessível para a sua empresa</h2>
+        <p class="ds-lead" data-reveal="up">Comece com tudo o que é obrigatório, sem complicação e com preço justo.</p>
+      </div>
+      <div class="ds-plan" data-reveal="up">
+        <div class="top">
+          <span class="chev"></span>
+          <span class="tag">Plano Essencial</span>
+          <div class="price">R$ 299,90<span>/mês</span></div>
+          <div class="ps">Para empresas com até 5 colaboradores</div>
+        </div>
+        <ul class="list">
+          <li><span class="tk"><svg><use href="#i-check"/></svg></span> PGR</li>
+          <li><span class="tk"><svg><use href="#i-check"/></svg></span> PCMSO</li>
+          <li><span class="tk"><svg><use href="#i-check"/></svg></span> LTCAT</li>
+          <li><span class="tk"><svg><use href="#i-check"/></svg></span> ASOs psicológicos</li>
+          <li><span class="tk"><svg><use href="#i-check"/></svg></span> eSocial SST</li>
+          <li><span class="tk"><svg><use href="#i-check"/></svg></span> Exames clínicos</li>
+        </ul>
+        <div class="foot"><a class="ds-btn acc lg" href="#contato">Quero esse plano <svg><use href="#i-arrow"/></svg></a></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ Benefícios ============ -->
+  <section class="ds-sec bg-soft" id="beneficios">
+    <div class="ds-wrap">
+      <div data-stagger="100">
+        <span class="ds-kicker" data-reveal="up">Benefícios para sua empresa</span>
+        <h2 class="ds-h2" data-reveal="up">Mais segurança, economia e tranquilidade</h2>
+      </div>
+      <ul class="ds-ben" data-stagger="60">
+        <li data-reveal="up"><span class="ic"><svg><use href="#i-shield"/></svg></span> Redução de riscos trabalhistas</li>
+        <li data-reveal="up"><span class="ic"><svg><use href="#i-layers"/></svg></span> Maior organização documental</li>
+        <li data-reveal="up"><span class="ic"><svg><use href="#i-doc-check"/></svg></span> Conformidade com normas obrigatórias</li>
+        <li data-reveal="up"><span class="ic"><svg><use href="#i-clock"/></svg></span> Agilidade no atendimento ocupacional</li>
+        <li data-reveal="up"><span class="ic"><svg><use href="#i-heart"/></svg></span> Melhor gestão da saúde dos colaboradores</li>
+        <li data-reveal="up"><span class="ic"><svg><use href="#i-headset"/></svg></span> Suporte especializado</li>
+        <li data-reveal="up"><span class="ic"><svg><use href="#i-zap"/></svg></span> Mais produtividade e segurança</li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- ============ Como Funciona ============ -->
+  <section class="ds-sec" id="como-funciona">
+    <div class="ds-wrap">
+      <div class="ds-center" data-stagger="100">
+        <span class="ds-kicker" data-reveal="up">Como Funciona</span>
+        <h2 class="ds-h2" data-reveal="up">Simples, rápido e eficiente</h2>
+      </div>
+      <div class="ds-flow" data-stagger="110">
+        <div class="st" data-reveal="up"><div class="nd"><span>1</span></div><h3>Contato</h3><p>Você entra em contato com a nossa equipe.</p></div>
+        <div class="st" data-reveal="up"><div class="nd"><span>2</span></div><h3>Análise</h3><p>Analisamos as necessidades da sua empresa.</p></div>
+        <div class="st" data-reveal="up"><div class="nd"><span>3</span></div><h3>Solução</h3><p>Montamos a melhor solução ocupacional.</p></div>
+        <div class="st" data-reveal="up"><div class="nd"><span>4</span></div><h3>Proteção</h3><p>Sua empresa fica regularizada e protegida.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ Para quem é ============ -->
+  <section class="ds-sec bg-soft" id="para-quem">
+    <div class="ds-wrap">
+      <div data-stagger="100">
+        <span class="ds-kicker" data-reveal="up">Para quem é</span>
+        <h2 class="ds-h2" data-reveal="up">Atendemos empresas de diversos segmentos</h2>
+      </div>
+      <ul class="ds-seg" data-stagger="55">
+        <li data-reveal="up"><svg><use href="#i-factory"/></svg> Indústrias</li>
+        <li data-reveal="up"><svg><use href="#i-store"/></svg> Comércios</li>
+        <li data-reveal="up"><svg><use href="#i-hospital"/></svg> Clínicas</li>
+        <li data-reveal="up"><svg><use href="#i-building"/></svg> Escritórios</li>
+        <li data-reveal="up"><svg><use href="#i-users"/></svg> Prestadores de serviço</li>
+        <li data-reveal="up"><svg><use href="#i-hardhat"/></svg> Construção civil</li>
+        <li data-reveal="up"><svg><use href="#i-truck"/></svg> Transportadoras</li>
+        <li data-reveal="up"><svg><use href="#i-briefcase"/></svg> Pequenas e médias empresas</li>
+        <li data-reveal="up"><svg><use href="#i-zap"/></svg> Empresas em expansão</li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- ============ CTA final ============ -->
+  <section class="ds-cta" id="contato">
+    <span class="chev"></span>
+    <div class="ds-wrap inner" data-stagger="110">
+      <span class="ds-kicker on-dark" data-reveal="up" style="justify-content:center">Vamos começar</span>
+      <h2 data-reveal="up">Sua empresa protegida começa com uma gestão ocupacional inteligente</h2>
+      <p data-reveal="up">Fale agora com a nossa equipe e descubra como podemos ajudar sua empresa com soluções completas em Saúde Ocupacional e Segurança do Trabalho.</p>
+      <div class="row" data-reveal="up">
+        <a class="ds-btn wa lg" href="https://wa.me/5511963252915?text=Ol%C3%A1!%20Gostaria%20de%20solicitar%20um%20or%C3%A7amento." target="_blank" rel="noopener"><svg><use href="#i-whatsapp"/></svg> Chame no WhatsApp</a>
+        <a class="ds-btn acc lg" href="tel:+5511963252915"><svg><use href="#i-phone"/></svg> Solicite orçamento</a>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<!-- ============ Footer ============ -->
+<footer class="ds-foot">
+  <div class="ds-wrap">
+    <div class="ds-foot-top">
+      <div>
+        <a class="brand" href="#top">
+          <span class="mark"><svg viewBox="0 0 64 64"><use href="#ds-logo"/></svg></span>
+          <span class="name"><span class="d">DOUTOR</span> <span class="s">SAFETY</span><small>SAÚDE OCUPACIONAL LTDA</small></span>
+        </a>
+        <p>Consultoria em saúde, segurança e qualidade no trabalho. Especialistas em você! Saúde Ocupacional • Segurança do Trabalho • Telemedicina.</p>
+      </div>
+      <div>
+        <h4>Soluções</h4>
+        <ul>
+          <li><a href="#servicos">PCMSO &amp; PGR</a></li>
+          <li><a href="#servicos">LTCAT &amp; ASO</a></li>
+          <li><a href="#servicos">Exames Ocupacionais</a></li>
+          <li><a href="#servicos">eSocial SST</a></li>
+          <li><a href="#planos">Planos</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Contato</h4>
+        <ul class="ct">
+          <li><svg><use href="#i-whatsapp"/></svg> <a href="https://wa.me/5511963252915" target="_blank" rel="noopener">(11) 96325-2915</a></li>
+          <li><svg><use href="#i-mail"/></svg> <a href="mailto:contato@doutorsafety.com.br">contato@doutorsafety.com.br</a></li>
+          <li><svg><use href="#i-pin"/></svg> Rua Miguel Romano, 65 — Centro, Guarulhos/SP</li>
+        </ul>
+      </div>
+    </div>
+    <div class="ds-foot-bot">
+      <span>© 2025 Doutor Safety — Segurança &amp; Saúde. Todos os direitos reservados.</span>
+      <span>Atendimento rápido e especializado em todo o Brasil</span>
+    </div>
+  </div>
+</footer>
+
+<!-- ============ WhatsApp FAB ============ -->
+<a class="wa-fab" href="https://wa.me/5511963252915?text=Ol%C3%A1!%20Gostaria%20de%20uma%20proposta%20da%20Doutor%20Safety." target="_blank" rel="noopener" aria-label="WhatsApp">
+  <svg><use href="#i-whatsapp"/></svg>
+</a>
+
+<script src="js/app.js"></script>
+<script src="js/version-switcher.js"></script>
+
+</body>
+</html>
