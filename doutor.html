@@ -5,7 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Doutor Safety — Saúde Ocupacional, Segurança do Trabalho e Telemedicina</title>
 <meta name="description" content="Doutor Safety — Consultoria em saúde, segurança e qualidade no trabalho. Soluções completas em Saúde Ocupacional, Segurança do Trabalho e Telemedicina para empresas de todo o Brasil.">
-<link rel="icon" type="image/svg+xml" href="assets/doutor-logo.svg">
+<link rel="icon" type="image/png" href="assets/doutor-mascote.png">
 <link rel="stylesheet" href="css/doutor.css">
 </head>
 <body>
@@ -58,10 +58,11 @@
 <header class="site-header">
   <div class="ds-wrap">
     <a class="brand" href="#top" aria-label="Doutor Safety — Saúde Ocupacional">
-      <span class="mark"><svg viewBox="0 0 64 64"><use href="#ds-logo"/></svg></span>
+      <span class="mark"><img src="assets/doutor-mascote.png" alt="Mascote Doutor Safety"></span>
       <span class="name"><span class="d">DOUTOR</span> <span class="s">SAFETY</span><small>SAÚDE OCUPACIONAL LTDA</small></span>
     </a>
     <nav class="ds-nav" aria-label="Navegação principal">
+      <span class="nav-lamp"></span>
       <a href="#sobre">Sobre</a>
       <a href="#servicos">Serviços</a>
       <a href="#diferenciais">Diferenciais</a>
@@ -91,7 +92,8 @@
 
 <!-- ============ HERO ============ -->
 <section class="ds-hero" id="hero">
-  <span class="chevrons"></span>
+  <span class="grid-beams"></span>
+  <span class="beam b1"></span><span class="beam b2"></span><span class="beam b3"></span><span class="beam b4"></span><span class="beam b5"></span>
   <span class="glow g1"></span><span class="glow g2"></span>
   <div class="ds-wrap ds-hero-grid">
     <div class="ds-hero-copy" data-stagger="100">
@@ -116,11 +118,8 @@
       <span class="ring r2"></span>
       <span class="ring"></span>
       <span class="conf">100% Conforme</span>
-      <div class="core">
-        <span class="logo-chip"><svg viewBox="0 0 64 64" aria-hidden="true"><use href="#ds-logo"/></svg></span>
-        <b>Doutor Safety</b>
-        <span>Saúde Ocupacional</span>
-      </div>
+      <img class="ds-mascote" src="assets/doutor-mascote.png" alt="Mascote Doutor Safety — médico com capacete">
+
       <span class="ds-seal s1"><svg><use href="#i-doc-check"/></svg> PCMSO em dia</span>
       <span class="ds-seal s2"><svg><use href="#i-stethoscope"/></svg> ASO emitido</span>
       <span class="ds-seal s3"><svg><use href="#i-refresh"/></svg> eSocial integrado</span>
@@ -144,13 +143,14 @@
   <!-- ============ Sobre ============ -->
   <section class="ds-sec" id="sobre">
     <div class="ds-wrap ds-about">
+      <div class="ds-about-fig" data-reveal="scale">
+        <img src="assets/doutor-bracos.png" alt="Especialista da Doutor Safety de braços cruzados">
+      </div>
       <div data-stagger="100">
         <span class="ds-kicker" data-reveal="up">Sobre a Doutor Safety</span>
         <p class="stmt" data-reveal="up" style="margin-top:16px">Nascemos para oferecer um atendimento ocupacional <em>moderno, eficiente e humanizado</em> — para empresas que querem cuidar da saúde dos colaboradores sem burocracia.</p>
         <p class="ds-lead" data-reveal="up">Nosso foco é proporcionar tranquilidade para a sua empresa, reduzindo riscos, otimizando processos e garantindo conformidade com as exigências legais.</p>
-      </div>
-      <div data-reveal="right">
-        <ul class="ds-sol">
+        <ul class="ds-sol" data-reveal="up" style="margin-top:28px">
           <li><span class="ch"></span> Saúde Ocupacional</li>
           <li><span class="ch"></span> Segurança do Trabalho</li>
           <li><span class="ch"></span> Telemedicina</li>
@@ -184,7 +184,6 @@
 
   <!-- ============ Diferenciais ============ -->
   <section class="ds-sec ds-diff" id="diferenciais">
-    <span class="chev"></span>
     <div class="ds-wrap">
       <div data-stagger="100">
         <span class="ds-kicker on-dark" data-reveal="up">Diferenciais</span>
@@ -207,19 +206,18 @@
 
   <!-- ============ Planos ============ -->
   <section class="ds-sec" id="planos">
-    <div class="ds-wrap">
+    <div class="ds-wrap ds-plan-wrap">
+      <img class="ds-plan-aside" src="assets/doutor-prancheta.png" alt="Especialista da Doutor Safety com prancheta" data-reveal="scale">
       <div class="ds-center" data-stagger="100">
         <span class="ds-kicker" data-reveal="up">Planos</span>
         <h2 class="ds-h2" data-reveal="up">Pacote acessível para a sua empresa</h2>
         <p class="ds-lead" data-reveal="up">Comece com tudo o que é obrigatório, sem complicação e com preço justo.</p>
       </div>
       <div class="ds-plan" data-reveal="up">
-        <div class="top">
-          <span class="chev"></span>
-          <span class="tag">Plano Essencial</span>
-          <div class="price">R$ 299,90<span>/mês</span></div>
-          <div class="ps">Para empresas com até 5 colaboradores</div>
-        </div>
+        <span class="tag">Plano Essencial</span>
+        <div class="price">R$ 299,90<span class="per">/mês</span></div>
+        <p class="ps">Para empresas com até 5 colaboradores</p>
+        <div class="div"></div>
         <ul class="list">
           <li><span class="tk"><svg><use href="#i-check"/></svg></span> PGR</li>
           <li><span class="tk"><svg><use href="#i-check"/></svg></span> PCMSO</li>
@@ -228,7 +226,7 @@
           <li><span class="tk"><svg><use href="#i-check"/></svg></span> eSocial SST</li>
           <li><span class="tk"><svg><use href="#i-check"/></svg></span> Exames clínicos</li>
         </ul>
-        <div class="foot"><a class="ds-btn acc lg" href="#contato">Quero esse plano <svg><use href="#i-arrow"/></svg></a></div>
+        <div class="foot"><a class="ds-btn lg shine" href="#contato">Quero esse plano <svg><use href="#i-arrow"/></svg></a></div>
       </div>
     </div>
   </section>
@@ -291,14 +289,18 @@
 
   <!-- ============ CTA final ============ -->
   <section class="ds-cta" id="contato">
-    <span class="chev"></span>
-    <div class="ds-wrap inner" data-stagger="110">
-      <span class="ds-kicker on-dark" data-reveal="up" style="justify-content:center">Vamos começar</span>
-      <h2 data-reveal="up">Sua empresa protegida começa com uma gestão ocupacional inteligente</h2>
-      <p data-reveal="up">Fale agora com a nossa equipe e descubra como podemos ajudar sua empresa com soluções completas em Saúde Ocupacional e Segurança do Trabalho.</p>
-      <div class="row" data-reveal="up">
-        <a class="ds-btn wa lg" href="https://wa.me/5511963252915?text=Ol%C3%A1!%20Gostaria%20de%20solicitar%20um%20or%C3%A7amento." target="_blank" rel="noopener"><svg><use href="#i-whatsapp"/></svg> Chame no WhatsApp</a>
-        <a class="ds-btn acc lg" href="tel:+5511963252915"><svg><use href="#i-phone"/></svg> Solicite orçamento</a>
+    <div class="ds-wrap inner ds-cta-grid" data-stagger="110">
+      <div class="ds-cta-copy">
+        <span class="ds-kicker on-dark" data-reveal="up">Vamos começar</span>
+        <h2 data-reveal="up">Sua empresa protegida começa com uma gestão ocupacional inteligente</h2>
+        <p data-reveal="up">Fale agora com a nossa equipe e descubra como podemos ajudar sua empresa com soluções completas em Saúde Ocupacional e Segurança do Trabalho.</p>
+        <div class="row" data-reveal="up">
+          <a class="ds-btn wa lg" href="https://wa.me/5511963252915?text=Ol%C3%A1!%20Gostaria%20de%20solicitar%20um%20or%C3%A7amento." target="_blank" rel="noopener"><svg><use href="#i-whatsapp"/></svg> Chame no WhatsApp</a>
+          <a class="ds-btn acc lg" href="tel:+5511963252915"><svg><use href="#i-phone"/></svg> Solicite orçamento</a>
+        </div>
+      </div>
+      <div class="ds-cta-fig" data-reveal="scale">
+        <img src="assets/doutor-aponta.png" alt="Especialista da Doutor Safety apontando">
       </div>
     </div>
   </section>
@@ -311,7 +313,7 @@
     <div class="ds-foot-top">
       <div>
         <a class="brand" href="#top">
-          <span class="mark"><svg viewBox="0 0 64 64"><use href="#ds-logo"/></svg></span>
+          <span class="mark"><img src="assets/doutor-mascote.png" alt="Mascote Doutor Safety"></span>
           <span class="name"><span class="d">DOUTOR</span> <span class="s">SAFETY</span><small>SAÚDE OCUPACIONAL LTDA</small></span>
         </a>
         <p>Consultoria em saúde, segurança e qualidade no trabalho. Especialistas em você! Saúde Ocupacional • Segurança do Trabalho • Telemedicina.</p>
@@ -348,6 +350,7 @@
 </a>
 
 <script src="js/app.js"></script>
+<script src="js/doutor.js"></script>
 <script src="js/version-switcher.js"></script>
 
 </body>
