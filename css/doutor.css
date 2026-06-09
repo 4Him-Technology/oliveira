@@ -283,21 +283,24 @@ ul{margin:0;padding:0;list-style:none}
 .ds-cta .row{display:flex;flex-wrap:wrap;gap:14px;justify-content:center;margin-top:38px}
 
 /* =======================================================================
-   Avatares (mascote de corpo inteiro) — Sobre, Planos e CTA
+   Avatares (mascote — busto, da cintura pra cima) — Sobre, Planos e CTA
    ======================================================================= */
 .ds-about-fig{display:flex;justify-content:center;align-items:center}
-.ds-about-fig img{width:auto;height:clamp(300px,33vw,440px);filter:drop-shadow(0 24px 38px rgba(16,120,67,.20))}
+.ds-about-fig img{width:auto;height:clamp(240px,26vw,330px)}
 /* Planos — figura lateral no espaço em branco ao lado do card centralizado */
 .ds-plan-wrap{position:relative}
-.ds-plan-aside{position:absolute;left:0;bottom:6px;width:auto;height:clamp(300px,30vw,410px);z-index:0;
-  pointer-events:none;filter:drop-shadow(0 24px 38px rgba(16,120,67,.18))}
+.ds-plan-aside{position:absolute;left:0;bottom:34px;width:auto;height:clamp(250px,26vw,340px);z-index:0;pointer-events:none}
 /* CTA — figura apontando para o texto */
 .ds-cta-grid{display:grid;grid-template-columns:1.25fr .75fr;gap:clamp(20px,4vw,56px);align-items:center;text-align:left}
 .ds-cta-grid h2{margin-inline:0;max-width:20ch}
 .ds-cta-grid p{margin-inline:0}
 .ds-cta-grid .row{justify-content:flex-start}
 .ds-cta-fig{display:flex;justify-content:center}
-.ds-cta-fig img{width:auto;height:clamp(220px,29vw,370px);filter:drop-shadow(0 22px 40px rgba(0,0,0,.42))}
+.ds-cta-fig img{width:auto;height:clamp(210px,25vw,320px)}
+/* dissolve suave na base (suaviza o corte na cintura) */
+.ds-about-fig img,.ds-plan-aside,.ds-cta-fig img{
+  -webkit-mask-image:linear-gradient(to bottom,#000 85%,transparent);
+          mask-image:linear-gradient(to bottom,#000 85%,transparent)}
 
 /* =======================================================================
    Footer
