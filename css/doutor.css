@@ -124,6 +124,7 @@ ul{margin:0;padding:0;list-style:none}
 .mobile-nav{position:fixed;inset:0;z-index:1200;background:var(--g-dark);display:flex;flex-direction:column;padding:84px var(--ds-gutter) 40px;transform:translateX(100%);transition:transform .4s var(--ease);visibility:hidden}
 .mobile-nav.open{transform:none;visibility:visible}
 .mobile-nav a{font-family:var(--ds-display);font-weight:700;font-size:22px;color:#fff;padding:15px 0;border-bottom:1px solid rgba(255,255,255,.12)}
+.mobile-nav a.ds-btn{align-self:flex-start;margin-top:30px;font-size:16px;color:#06321b;padding:16px 28px;border-bottom:none;border-radius:14px}
 .mobile-nav .close{position:absolute;top:20px;right:var(--ds-gutter);width:46px;height:46px;border:none;border-radius:11px;background:rgba(255,255,255,.12);color:#fff;font-size:22px;cursor:pointer}
 .ds-progress{position:fixed;top:0;left:0;height:3px;width:0;background:linear-gradient(90deg,var(--g-acc),var(--g-prim));z-index:1100;transition:width .1s linear}
 
