@@ -142,6 +142,7 @@ ul{margin:0;padding:0;list-style:none}
 .ds-h1 .u{position:relative;white-space:nowrap}
 .ds-h1 .u::after{content:"";position:absolute;left:0;right:0;bottom:.06em;height:.16em;border-radius:3px;background:var(--g-acc);opacity:.9}
 .ds-hero-sub{font-size:clamp(16px,1.35vw,19px);color:rgba(255,255,255,.84);max-width:50ch;margin-top:22px}
+.ds-hero-note{margin-top:12px;color:var(--g-acc-2);font-weight:600;font-size:clamp(15px,1.25vw,18px);max-width:54ch}
 .ds-hero-cta{display:flex;flex-wrap:wrap;gap:13px;margin-top:34px}
 .ds-trust{display:flex;flex-wrap:wrap;gap:8px;margin-top:30px}
 .ds-trust li{display:inline-flex;align-items:center;gap:8px;font-size:13px;font-weight:600;color:rgba(255,255,255,.88);
@@ -289,8 +290,16 @@ ul{margin:0;padding:0;list-style:none}
 .ds-about-fig{display:flex;justify-content:center;align-items:center}
 .ds-about-fig img{width:auto;height:clamp(310px,34vw,470px)}
 /* Planos — figura lateral no espaço em branco ao lado do card centralizado */
-.ds-plan-wrap{position:relative}
-.ds-plan-aside{position:absolute;left:0;bottom:30px;width:auto;height:clamp(300px,30vw,430px);z-index:0;pointer-events:none}
+/* Planos — 2 cards lado a lado com o avatar da prancheta na lateral */
+.ds-plans-grid{display:grid;grid-template-columns:auto minmax(0,440px) minmax(0,440px);gap:26px;justify-content:center;align-items:stretch;margin-top:46px}
+.ds-plans-grid .ds-plan{margin:0;display:flex;flex-direction:column;text-align:left}
+.ds-plans-grid .ds-plan .foot{margin-top:auto;padding-top:26px}
+.ds-plan-fig{align-self:end;justify-self:center;height:clamp(280px,27vw,400px);width:auto;pointer-events:none}
+.ds-plan .pnote{margin-top:16px;font-size:13.5px;color:var(--muted)}
+.ds-plan .price.compact{font-size:clamp(30px,4.2vw,40px);padding-top:8px}
+.ds-plans-grid .ds-plan .price{font-size:clamp(36px,4.2vw,48px)}
+.ds-plans-grid .ds-plan .price.compact{font-size:clamp(28px,3.4vw,38px)}
+.ds-plan .foot .ds-btn{white-space:normal;text-align:center;line-height:1.3}
 /* CTA — figura apontando para o texto */
 .ds-cta-grid{display:grid;grid-template-columns:1.25fr .75fr;gap:clamp(20px,4vw,56px);align-items:center;text-align:left}
 .ds-cta-grid h2{margin-inline:0;max-width:20ch}
@@ -299,7 +308,7 @@ ul{margin:0;padding:0;list-style:none}
 .ds-cta-fig{display:flex;justify-content:center}
 .ds-cta-fig img{width:auto;height:clamp(280px,32vw,440px)}
 /* dissolve suave na base (suaviza o corte na cintura) */
-.ds-about-fig img,.ds-plan-aside,.ds-cta-fig img{
+.ds-about-fig img,.ds-plan-fig,.ds-cta-fig img{
   -webkit-mask-image:linear-gradient(to bottom,#000 85%,transparent);
           mask-image:linear-gradient(to bottom,#000 85%,transparent)}
 
@@ -384,7 +393,13 @@ ul{margin:0;padding:0;list-style:none}
   .ds-flow{grid-template-columns:1fr}
 }
 /* Avatares — responsivo */
-@media (max-width:1200px){ .ds-plan-aside{display:none} }
+@media (max-width:1200px){
+  .ds-plan-fig{display:none}
+  .ds-plans-grid{grid-template-columns:repeat(2,minmax(0,440px))}
+}
+@media (max-width:860px){
+  .ds-plans-grid{grid-template-columns:minmax(0,480px)}
+}
 @media (max-width:760px){
   .ds-about-fig{display:none}
   .ds-cta-grid{grid-template-columns:1fr;text-align:center}
