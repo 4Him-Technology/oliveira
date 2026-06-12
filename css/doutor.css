@@ -97,7 +97,7 @@ ul{margin:0;padding:0;list-style:none}
 
 .site-header{position:sticky;top:0;z-index:1000;height:var(--header-h);display:flex;align-items:center;
   background:rgba(9,30,21,.92);backdrop-filter:blur(10px);transition:background .4s var(--ease),box-shadow .4s,backdrop-filter .4s}
-.site-header .ds-wrap{display:flex;align-items:center;justify-content:space-between;gap:24px;width:100%}
+.site-header .ds-wrap{display:flex;align-items:center;justify-content:space-between;gap:24px;width:100%;max-width:1340px}
 .site-header.solid{background:rgba(255,255,255,.9);backdrop-filter:blur(16px) saturate(150%);box-shadow:0 1px 0 var(--line),0 12px 28px -22px rgba(8,40,24,.5)}
 .brand{display:flex;align-items:center;gap:12px}
 .brand .mark{width:52px;height:52px;flex:none;display:grid;place-items:center}
@@ -111,7 +111,7 @@ ul{margin:0;padding:0;list-style:none}
 .site-header.solid .brand .name small{color:var(--g-gray)}
 .ds-nav{position:relative;display:flex;align-items:center;gap:2px;padding:5px;border-radius:999px;
   background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.14);backdrop-filter:blur(8px)}
-.ds-nav a{position:relative;z-index:2;padding:8px 17px;border-radius:999px;font-family:var(--ds-display);font-weight:600;font-size:14px;color:rgba(255,255,255,.92);transition:color .25s}
+.ds-nav a{position:relative;z-index:2;padding:8px 13px;border-radius:999px;font-family:var(--ds-display);font-weight:600;font-size:13.5px;color:rgba(255,255,255,.92);transition:color .25s;white-space:nowrap}
 .ds-nav a:hover{color:#fff}
 .site-header.solid .ds-nav{background:rgba(8,40,24,.05);border-color:var(--line)}
 .site-header.solid .ds-nav a{color:var(--ink-soft)}
@@ -377,6 +377,13 @@ ul{margin:0;padding:0;list-style:none}
   .ds-svc{grid-template-columns:1fr}
   .ds-diff-grid{grid-template-columns:1fr 1fr}
   .ds-foot-top{grid-template-columns:1fr 1fr}
+}
+@media (max-width:1390px){
+  .ds-nav a{padding:8px 10px;font-size:13px}
+}
+@media (max-width:1120px){
+  .ds-nav{display:none}
+  .menu-toggle{display:flex}
 }
 @media (max-width:760px){
   .ds-nav,.header-cta .ds-btn{display:none}
