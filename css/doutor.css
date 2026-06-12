@@ -208,7 +208,8 @@ ul{margin:0;padding:0;list-style:none}
 .ds-svc .svc:hover{padding-left:14px}
 .ds-svc .svc::before{content:"";position:absolute;left:0;top:0;height:100%;width:3px;background:var(--g-acc);transform:scaleY(0);transform-origin:top;transition:transform .3s var(--ease)}
 .ds-svc .svc:hover::before{transform:scaleY(1)}
-.ds-svc .no{font-family:var(--ds-display);font-weight:800;font-size:30px;line-height:1;color:transparent;-webkit-text-stroke:1.4px var(--g-acc);flex:none;min-width:48px}
+.ds-svc .no{font-family:var(--ds-display);font-weight:800;font-size:30px;line-height:1;flex:none;min-width:48px;
+  color:transparent;background:linear-gradient(180deg,var(--g-acc) 0%,#a7e3c4 100%);-webkit-background-clip:text;background-clip:text}
 .ds-svc .svc h3{font-size:19px;color:var(--g-dark);display:flex;align-items:center;gap:10px}
 .ds-svc .svc h3 svg{width:20px;height:20px;color:var(--g-prim);flex:none}
 .ds-svc .svc p{color:var(--ink-soft);font-size:14.5px;margin-top:7px}
